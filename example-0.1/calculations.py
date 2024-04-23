@@ -1,9 +1,4 @@
-try:
-    import sympy
-except ModuleNotFoundError:
-    import os
-
-    os.system("pip install -r ./requirements.txt")
+import sympy
 
 
 k, wo, t, W = sympy.symbols("k, wo, t, W")

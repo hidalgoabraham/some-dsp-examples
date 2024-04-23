@@ -1,16 +1,10 @@
-try:
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import mplcursors
-except ModuleNotFoundError:
-    import os
-
-    os.system("pip install -r ./requirements.txt")
+import numpy as np
+import matplotlib.pyplot as plt
+import mplcursors
 
 A = 1
 N = 41
 N1 = 2
-
 
 # Define k values for the plot
 K = np.linspace(-50, 50, 101)
