@@ -20,7 +20,7 @@ for i, w in enumerate(W):
 plt.title("Fourier Transform")
 plt.xlabel("w")
 plt.ylabel("X")
-plt.plot(W, X, "-", label="X")
+axis = plt.plot(W, X, ".", label="X")
 
 
 plt.grid(True)

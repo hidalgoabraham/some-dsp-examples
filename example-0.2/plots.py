@@ -22,7 +22,7 @@ for i, k in enumerate(K):
 plt.title("Fourier ak Coefficients")
 plt.xlabel("k")
 plt.ylabel("ak")
-plt.plot(K, ak_x, ".", label="ak")
+axis = plt.plot(K, ak_x, ".", label="ak")
 
 
 plt.grid(True)
@@ -31,7 +31,7 @@ plt.legend()
 # # labels = []
 # # for i in range(len(n)):
 # #     labels.append(f"sinc[n]={str(round(ak_x[i], 3))}" + f"\nn={str(round(n[i], 3))}")
-# # mplcursors.cursor(var, hover=True).connect("add", lambda sel: sel.annotation.set_text(labels[int(sel.index)]))
+# # mplcursors.cursor(axis, hover=True).connect("add", lambda sel: sel.annotation.set_text(labels[int(sel.index)]))
 
 mplcursors.cursor(hover=True)
 

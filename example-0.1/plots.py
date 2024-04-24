@@ -27,18 +27,18 @@ ak_x3[50] = 1 / 8  # To correct the invalid values
 plt.title("Fourier ak Coefficients")
 plt.xlabel("k")
 plt.ylabel("ak")
-plt.plot(K, ak_x1, ".-", label="W=T/2")
-# plt.plot(K, ak_x2, ".-", label="W=T/4")
-# plt.plot(K, ak_x3, ".-", label="W=T/8")
+axis = plt.plot(K, ak_x1, ".", label="W=T/2")
+# axis = plt.plot(K, ak_x2, ".-", label="W=T/4")
+# axis = plt.plot(K, ak_x3, ".-", label="W=T/8")
 
 
 plt.grid(True)
 plt.legend()
 
 # labels = []
-# for i in range(len(n)):
-#     labels.append(f"sinc[n]={str(round(ak_x1[i], 3))}" + f"\nn={str(round(n[i], 3))}")
-# mplcursors.cursor(var, hover=True).connect("add", lambda sel: sel.annotation.set_text(labels[int(sel.index)]))
+# for i in range(len(K)):
+#     labels.append(f"x[n]={str(round(ak_x1[i], 3))}" + f"\nn={str(round(K[i], 3))}")
+# mplcursors.cursor(axis, hover=True).connect("add", lambda sel: sel.annotation.set_text(labels[int(sel.index)]))
 
 mplcursors.cursor(hover=True)
 
