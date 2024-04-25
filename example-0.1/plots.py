@@ -37,7 +37,7 @@ plt.legend()
 
 # labels = []
 # for i in range(len(K)):
-#     labels.append(f"x[n]={str(round(ak_x1[i], 3))}" + f"\nn={str(round(K[i], 3))}")
+#     labels.append(f"ak={str(round(ak_x1[i], 3))}" + f"\nk={str(round(K[i], 3))}")
 # mplcursors.cursor(axis, hover=True).connect("add", lambda sel: sel.annotation.set_text(labels[int(sel.index)]))
 
 mplcursors.cursor(hover=True)
