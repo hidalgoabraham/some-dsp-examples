@@ -28,8 +28,8 @@ plt.title("Fourier ak Coefficients")
 plt.xlabel("k")
 plt.ylabel("ak")
 axis = plt.plot(K, ak_x1, ".", label="W=T/2")
-# axis = plt.plot(K, ak_x2, ".-", label="W=T/4")
-# axis = plt.plot(K, ak_x3, ".-", label="W=T/8")
+# axis = plt.plot(K, ak_x2, ".", label="W=T/4")
+# axis = plt.plot(K, ak_x3, ".", label="W=T/8")
 
 
 plt.grid(True)

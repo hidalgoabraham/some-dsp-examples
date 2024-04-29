@@ -2,26 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import mplcursors
 
-A = 1
 N1 = 3
 
-W = np.linspace(-15, 15, 501)
+W = np.linspace(-10, 10, 501)
 
 # Calculate X values
-X = np.sin(W * (N1 + 1 / 2)) / np.sin(W / 2)
-
-# Correct invalid values
-for i, w in enumerate(W):
-    if (w) % (2 * np.pi) == 0:
-        X[i] = A * (2 * N1 + 1)
+expo = np.e ** (1j * W)
+X_ejw = expo**3 + expo**2 + expo**1 + expo**0 + expo**1 + expo**2 + expo**3
 
 
 # Configure the plot
 plt.title("Fourier Transform")
 plt.xlabel("w")
-plt.ylabel("X")
-axis = plt.plot(W, X, ".", label="X")
-
+plt.ylabel("Abs[X]")
+axis = plt.plot(W, abs(X_ejw), "-", label="Abs[X]")
 
 plt.grid(True)
 plt.legend()
