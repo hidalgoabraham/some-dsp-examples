@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import mplcursors
 
 A = 1
-N1 = 23
+N1 = 3
 
 W = np.linspace(-15, 15, 501)
 

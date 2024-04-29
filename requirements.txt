@@ -2,3 +2,4 @@ sympy
 matplotlib
 mplcursors
 numpy
+plotly
