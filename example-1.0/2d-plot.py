@@ -2,8 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import mplcursors
 
-N1 = 3
-
 W = np.linspace(-10, 10, 501)
 
 # Calculate X values
