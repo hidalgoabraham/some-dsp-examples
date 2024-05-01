@@ -3,3 +3,4 @@ matplotlib
 mplcursors
 numpy
 plotly
+lcapy
