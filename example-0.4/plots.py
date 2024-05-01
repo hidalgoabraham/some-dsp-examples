@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import mplcursors
 
 A = 1
-N1 = 23
+N1 = 3
 
 W = np.linspace(-15, 15, 501)
 
@@ -15,13 +15,11 @@ for i, w in enumerate(W):
     if (w) % (2 * np.pi) == 0:
         X[i] = A * (2 * N1 + 1)
 
-
 # Configure the plot
 plt.title("Fourier Transform")
 plt.xlabel("w")
-plt.ylabel("X")
-axis = plt.plot(W, X, "-", label="X")
-
+plt.ylabel("Abs[X]")
+axis = plt.plot(W, np.absolute(X), "-", label="Abs[X]")
 
 plt.grid(True)
 plt.legend()
