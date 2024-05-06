@@ -1,4 +1,4 @@
-import lcapy as lp  # type: ignore
+import lcapy as lp
 import sympy as sp
 
 wo = sp.symbols("wo")

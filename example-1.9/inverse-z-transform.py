@@ -1,5 +1,5 @@
 import sympy as sp
-import lcapy as lp  # type: ignore
+import lcapy as lp
 
 A, a = sp.symbols("A, a")
 
