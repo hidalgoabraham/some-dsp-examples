@@ -10,7 +10,7 @@ def complete_with_zeros(arr, final_len):
     return arr
 
 
-N = 5
+N = 3
 
 n = np.linspace(0, 50, 51)
 
