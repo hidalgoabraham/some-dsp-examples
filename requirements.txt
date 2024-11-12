@@ -4,3 +4,4 @@ mplcursors
 numpy
 plotly
 lcapy
+PyQt5
