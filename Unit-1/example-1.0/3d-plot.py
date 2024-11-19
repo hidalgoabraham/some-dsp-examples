@@ -22,7 +22,7 @@ surface = go.Surface(x=re_z, y=im_z, z=Xz_abs, colorscale="Turbo", showscale=Fal
 fig.add_trace(surface, row=1, col=1)
 
 
-Xz_r1 = np.zeros(shape=[len(x_grid), len(x_grid[0])], dtype="complex_")
+Xz_r1 = np.zeros(shape=[len(x_grid), len(x_grid[0])], dtype="complex")
 
 for i in range(len(re_z)):
     for j in range(len(im_z)):
