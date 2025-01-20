@@ -11,7 +11,7 @@ fig = make_subplots(rows=1, cols=1, specs=[[{"type": "surface"}]])
 re_z = np.linspace(-1.5, 1.5, 500)
 im_z = np.linspace(-1.5, 1.5, 500)
 
-y_grid, x_grid = np.meshgrid(im_z, re_z)
+x_grid, y_grid = np.meshgrid(re_z, im_z)
 C = x_grid + 1j * y_grid
 r_grid = np.absolute(C)
 w_grid = np.angle(C)
