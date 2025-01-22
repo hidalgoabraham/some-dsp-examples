@@ -22,20 +22,28 @@ surface = go.Surface(x=re_z, y=im_z, z=Xz_abs, colorscale="Turbo", showscale=Fal
 fig.add_trace(surface, row=1, col=1)
 
 
-Xz_r1 = np.zeros(shape=[len(x_grid), len(x_grid[0])], dtype="complex")
+Xz_r1 = np.zeros(shape=[len(re_z), len(im_z)], dtype="complex")
 
 for i in range(len(re_z)):
     for j in range(len(im_z)):
-        x = re_z[i]
-        y = im_z[j]
-        r = np.sqrt(x**2 + y**2)
+        r = np.sqrt(re_z[i]**2 + im_z[j]**2)
 
         if round(r, 2) == 1:
-            c = x + 1j * y
+            c = re_z[i] + 1j * im_z[j]
             w = np.angle(c)
 
             zeta = round(r, 2) * np.e ** (1j * w)
-            Xz_r1[i][j] = zeta**3 + zeta**2 + zeta**1 + zeta**0 + zeta**-1 + zeta**-2 + zeta**-3
+            Xz_r1[j][i] = zeta**3 + zeta**2 + zeta**1 + zeta**0 + zeta**-1 + zeta**-2 + zeta**-3  # For some reason, Xz_r1[i][j] is calculated correctly but the plot is rotated by 90 degrees.
+
+            # if abs(w) < 0.01:
+            #     print(zeta)
+            #     print(w)
+            #     print(Xz_r1[i][j])
+            #     print(i)
+            #     print(re_z[i])
+            #     print(j)
+            #     print(im_z[j])
+            #     print("")
 
         else:
             Xz_r1[i][j] = 0
