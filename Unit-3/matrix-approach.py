@@ -133,7 +133,7 @@ def print_unique_entries(A):
 # print("")
 # print_complex_matrix(F @ F_1)
 
-N = 11
+N = 3
 F = create_fourier_matrix(N)
 print_complex_matrix(F)
 print("")
