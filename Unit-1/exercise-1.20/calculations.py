@@ -19,8 +19,7 @@ num = z_1**2 - 7 * z_1 + 12
 
 den = z_1**3 - 2 * z_1**2 + 2 * z_1 - 1
 # sp.pprint(sp.factor(den, z_1))
-# sp.pprint(sp.roots(den, z_1))
-
+sp.pprint(sp.roots(den, z_1))
 
 r1 = (1 / 2) - 1j * np.sqrt(3) / 2
 # r1_module, r1_phase = complex_cartesian_to_polar(r1, True)
@@ -30,7 +29,8 @@ r2 = (1 / 2) + 1j * np.sqrt(3) / 2
 # r2_module, r2_phase = complex_cartesian_to_polar(r2, in_deg=True)
 # print(f"r2 = {r2_module}/_{r2_phase}")
 
-# X = sp.factor(num) / sp.factor(den)
+
+X = sp.factor(num) / sp.factor(den)
 
 A1 = ((1 - 4) * (1 - 3)) / ((1 - r1) * (1 - r2))
 print(A1)

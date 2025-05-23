@@ -20,4 +20,5 @@ cos_wo = sp.symbols("cos_wo")
 cos_wo = (sp.E ** (sp.I * wo) + sp.E ** (-sp.I * wo)) / 2
 den = z**2 - 2 * r * z * cos_wo + r**2
 
-sp.pprint(den.factor())
+# sp.pprint(den.factor())
+print(den.factor())
