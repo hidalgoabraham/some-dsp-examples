@@ -10,11 +10,11 @@ def complete_with_zeros(arr, final_len):
     return arr
 
 
-N = 5
+N = 50
 
 n = np.linspace(0, 50, 51)
 
-x_n = np.array([1, 1, 1, 1, 1])
+x_n = np.array([1]*5)
 x_n = complete_with_zeros(x_n, N)
 # print(x_n)
 

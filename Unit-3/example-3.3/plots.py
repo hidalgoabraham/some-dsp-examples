@@ -38,7 +38,7 @@ def IDFT(X):
     return x
 
 
-N = 5
+N = 3
 
 x = np.array([1, 1, 1, 1, 1])
 x = zero_padding(x, N)
