@@ -11,7 +11,7 @@ def plot_filter_response(frequency_response):
     frequency_response (callable): Frequency response of the digital filter.
         It should take a single argument, w, and return the complex response.
     """
-    w = np.linspace(0, 0.8, 801)  # Frequency axis
+    w = np.linspace(0, 1, 1001)  # Frequency axis
 
     # Evaluate the transfer function
     response = np.array([frequency_response(wi*np.pi) for wi in w])
@@ -23,17 +23,18 @@ def plot_filter_response(frequency_response):
     # Create the plot
     fig, ax = plt.subplots(2, 1, figsize=(8, 6))
 
-    ax[0].plot(w, amplitude, ".")
+    ax[0].plot(w, amplitude, "-")
     ax[0].set_title("Amplitude Response")
     ax[0].set_xlabel("ω (π rad)")
     ax[0].set_ylabel("Amplitude")
     ax[0].grid(True)
 
-    ax[1].plot(w, amplitude_db, ".")
+    ax[1].plot(w, amplitude_db, "-")
     ax[1].set_title("Amplitude Response (dB)")
     ax[1].set_xlabel("ω (π rad)")
     ax[1].set_ylabel("Amplitude (dB)")
     ax[1].grid(True)
+    ax[1].set_ylim(bottom=-200)
 
     mplcursors.cursor(ax[0], hover=True).connect("add", lambda sel: sel.annotation.set_text(f"ω={sel.target[0]:.5f}π, Amplitude={sel.target[1]:.5f}"))
     mplcursors.cursor(ax[1], hover=True).connect("add", lambda sel: sel.annotation.set_text(f"ω={sel.target[0]:.5f}π, Amplitude (dB)={sel.target[1]:.5f}"))
