@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import mplcursors
-import math
 
 wp = 0.2 * np.pi
 ws = 0.3 * np.pi
@@ -10,7 +9,10 @@ delta_w = ws - wp
 
 M = 8 * np.pi / delta_w  # Hamming window
 
-M = math.ceil(M)
+M = int(np.ceil(M))
+
+if M % 2 != 0:  # Para un filtro Tipo I, M debe ser par
+    M += 1
 
 wc = (wp + ws) / 2
 
